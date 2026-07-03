@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Proposta da Toca do Reparo Cultural: um domingo de reggae e sound system no Sesc Itaquera, das 10h as 17h, com graffiti ao vivo.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#129409;</text></svg>">
+<title>Domingo é Toca — Reggae no Sesc Itaquera</title>
+<style>
+  :root{
+    --roots:#112A1D; --roots-2:#1b3a29; --roots-3:#254934;
+    --sand:#ECE6D6; --sand-2:#F5F1E6;
+    --gold:#E1A73A; --rust:#C24A2E; --olive:#7f7d64;
+    --text:#23261b; --text-2:#5d5c46; --rule:#d7d0be;
+    --font-d:"Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+    --font-b:"Helvetica Neue",Arial,"Segoe UI",sans-serif;
+    --font-u:"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--sand);color:var(--text);
+    font-family:var(--font-b);line-height:1.72;font-size:16.5px;overflow-x:hidden}
+  img{max-width:100%;display:block}
+
+  /* ---------- hero ---------- */
+  .hero{
+    color:var(--sand);
+    padding:clamp(46px,8vw,108px) 22px clamp(34px,5vw,60px);
+    background:
+      radial-gradient(closest-side at 84% 14%, rgba(225,167,58,.42), transparent 60%),
+      radial-gradient(closest-side at 90% 20%, rgba(194,74,46,.30), transparent 62%),
+      radial-gradient(closest-side at 8% 92%, rgba(225,167,58,.14), transparent 72%),
+      var(--roots);
+  }
+  .hero-inner{max-width:1010px;margin:0 auto}
+  .eyebrow{font-family:var(--font-u);text-transform:uppercase;letter-spacing:.3em;
+    font-size:12px;color:var(--gold);font-weight:700}
+  .hero h1{font-family:var(--font-d);font-weight:700;text-transform:uppercase;
+    font-size:clamp(54px,12.5vw,138px);line-height:.92;letter-spacing:.005em;
+    margin:.2em 0 .14em;color:var(--sand);text-wrap:balance}
+  .hero h1 .hl{color:var(--gold)}
+  .hero .sub{font-family:var(--font-d);font-weight:700;font-style:italic;
+    font-size:clamp(19px,3vw,30px);letter-spacing:.005em;color:var(--sand);margin:0}
+  .hero .oneline{font-family:var(--font-b);color:#d3caae;
+    font-size:clamp(15px,2vw,19px);margin:16px 0 0;max-width:46ch}
+  .ideals{display:flex;flex-wrap:wrap;gap:9px;margin:26px 0 0}
+  .ideal{font-family:var(--font-u);text-transform:uppercase;letter-spacing:.14em;
+    font-size:11.5px;font-weight:700;color:var(--roots);background:var(--gold);
+    padding:7px 12px;border-radius:2px}
+  .ideal:nth-child(even){background:var(--rust);color:#fff}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:16px 26px;margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,255,.16)}
+  .fact .k{font-family:var(--font-u);text-transform:uppercase;letter-spacing:.16em;
+    font-size:10px;color:var(--gold);font-weight:700}
+  .fact .v{font-family:var(--font-u);color:var(--sand);font-size:15px;margin-top:5px;line-height:1.4}
+
+  /* ---------- document body ---------- */
+  main{max-width:840px;margin:0 auto;padding:clamp(34px,5vw,64px) 22px 8px}
+  .sec{padding:clamp(28px,4.5vw,50px) 0;border-top:1px solid var(--rule)}
+  .sec:first-child{border-top:none;padding-top:clamp(8px,2vw,20px)}
+  .sec-h{display:flex;align-items:baseline;gap:16px;margin-bottom:20px}
+  .sec-n{font-family:var(--font-d);font-weight:700;font-size:clamp(34px,6vw,56px);
+    color:var(--rust);line-height:.8;letter-spacing:.01em;font-variant-numeric:tabular-nums}
+  .sec-h h2{font-family:var(--font-d);font-weight:700;
+    font-size:clamp(23px,3.5vw,33px);letter-spacing:-.005em;margin:0;
+    color:var(--roots);text-wrap:balance}
+  h3{font-family:var(--font-u);font-weight:800;text-transform:uppercase;
+    letter-spacing:.05em;font-size:13px;color:var(--roots);margin:30px 0 12px}
+  p{margin:0 0 16px}
+  .lead{font-size:1.06em;color:var(--text)}
+
+  ul,ol{margin:0 0 18px;padding-left:0;list-style:none}
+  li{position:relative;padding-left:26px;margin-bottom:11px}
+  ul li::before{content:"";position:absolute;left:3px;top:.66em;width:9px;height:9px;
+    background:var(--gold);transform:rotate(45deg)}
+  ol{counter-reset:o}
+  ol li{counter-increment:o;padding-left:36px}
+  ol li::before{content:counter(o,decimal-leading-zero);position:absolute;left:0;top:-.06em;
+    font-family:var(--font-d);font-weight:700;color:var(--rust);font-size:1.15em;
+    font-variant-numeric:tabular-nums}
+  strong{color:var(--roots);font-weight:700}
+
+  /* ---------- stat band ---------- */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0}
+  .stat{background:var(--sand-2);padding:20px 18px}
+  .stat .num{font-family:var(--font-d);font-weight:700;font-size:clamp(38px,6.4vw,54px);
+    line-height:.86;color:var(--rust);font-variant-numeric:tabular-nums}
+  .stat:nth-child(2) .num{color:var(--gold)}
+  .stat:nth-child(3) .num{color:var(--roots)}
+  .stat:nth-child(4) .num{color:var(--gold)}
+  .stat .cap{font-family:var(--font-u);font-size:11.5px;color:var(--text-2);
+    margin-top:9px;text-transform:uppercase;letter-spacing:.06em;line-height:1.35}
+
+  /* ---------- tables ---------- */
+  .tw{overflow-x:auto;margin:18px 0 22px;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;min-width:440px;
+    font-family:var(--font-u);font-size:14.5px;font-variant-numeric:tabular-nums}
+  thead th{background:var(--roots);color:var(--sand);text-align:left;font-weight:700;
+    text-transform:uppercase;letter-spacing:.08em;font-size:11px;padding:12px 14px;line-height:1.3}
+  tbody td{padding:11px 14px;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--text)}
+  tbody tr:nth-child(even){background:var(--sand-2)}
+  tbody td:first-child{font-weight:700;color:var(--roots)}
+  .note{font-family:var(--font-u);font-size:13.5px;color:var(--text-2);
+    border-left:3px solid var(--gold);padding:2px 0 2px 16px;margin:0 0 8px;font-style:italic}
+
+  /* ---------- footer ---------- */
+  footer{margin-top:clamp(30px,5vw,56px);
+    background:
+      radial-gradient(closest-side at 18% 20%, rgba(225,167,58,.20), transparent 68%),
+      radial-gradient(closest-side at 86% 82%, rgba(194,74,46,.22), transparent 66%),
+      var(--roots);
+    color:var(--sand);padding:clamp(44px,7vw,80px) 22px}
+  .footer-inner{max-width:840px;margin:0 auto}
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:18px 26px;margin:22px 0 40px}
+  .contact-grid .k{font-family:var(--font-u);text-transform:uppercase;letter-spacing:.14em;
+    font-size:10px;color:var(--gold);font-weight:700}
+  .contact-grid .v{font-family:var(--font-u);color:var(--sand);font-size:15px;margin-top:5px}
+  footer h2{font-family:var(--font-d);font-weight:700;font-size:clamp(23px,3.5vw,33px);margin:0;color:var(--sand)}
+  .tagline{font-family:var(--font-d);font-weight:700;text-transform:uppercase;
+    font-size:clamp(24px,4.6vw,46px);line-height:.98;letter-spacing:.005em;
+    color:var(--sand);text-wrap:balance;margin:0}
+  .tagline .hl{color:var(--gold)}
+  .tag-sub{font-family:var(--font-u);letter-spacing:.22em;text-transform:uppercase;
+    font-size:12px;color:var(--gold);font-weight:700;margin:18px 0 0}
+
+  a{color:var(--rust);text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  /* ---------- motion ---------- */
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .hero-inner>*{animation:rise .55s ease both}
+  .hero-inner>*:nth-child(2){animation-delay:.06s}
+  .hero-inner>*:nth-child(3){animation-delay:.12s}
+  .hero-inner>*:nth-child(4){animation-delay:.18s}
+  .hero-inner>*:nth-child(5){animation-delay:.24s}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+  /* ---------- print ---------- */
+  @media print{
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    body{font-size:11.5pt;background:#fff}
+    .hero{padding:34px 0}
+    main{padding:20px 0 0}
+    .sec-h,.stat,.fact,tr,li,.stats{break-inside:avoid}
+    .sec-h{break-after:avoid}
+    footer{margin-top:26px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Proposta de programação cultural</p>
+    <h1>Domingo é <span class="hl">Toca</span></h1>
+    <p class="sub">Reggae e Sound System no Sesc Itaquera</p>
+    <p class="oneline">Do Morcegão para o Sesc, no compasso do roots.</p>
+    <div class="ideals">
+      <span class="ideal">Paz</span>
+      <span class="ideal">Amor</span>
+      <span class="ideal">Unidade</span>
+      <span class="ideal">Consciência</span>
+    </div>
+    <div class="facts">
+      <div class="fact"><div class="k">Proponente</div><div class="v">Toca do Reparo Cultural</div></div>
+      <div class="fact"><div class="k">Coordenação geral</div><div class="v">João Gustavo</div></div>
+      <div class="fact"><div class="k">Local pretendido</div><div class="v">Sesc Itaquera, Zona Leste</div></div>
+      <div class="fact"><div class="k">Formato</div><div class="v">Dia inteiro, gratuito, aos domingos</div></div>
+      <div class="fact"><div class="k">Horário</div><div class="v">Das 10h às 17h</div></div>
+      <div class="fact"><div class="k">Periodicidade</div><div class="v">Mensal no piloto, com expansão para quinzenal</div></div>
+      <div class="fact"><div class="k">Classificação</div><div class="v">Livre, todas as idades</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="sec">
+    <div class="sec-h"><span class="sec-n">01</span><h2>Resumo executivo</h2></div>
+    <p class="lead">A Toca do Reparo Cultural propõe ao Sesc Itaquera um evento cultural periódico de domingo dedicado à cultura Reggae e à tradição do sound system. A proposta volta à própria origem do coletivo: as primeiras intervenções na Praça Dilva Gomes Martins, a Praça do Morcegão, em 2015, foram feitas com vitrola e discos de vinil, de graça, para a comunidade de Arthur Alvim.</p>
+    <p>Cada edição é um dia inteiro de reggae, das 10h às 17h, dentro do horário de funcionamento da unidade. O dia gira em torno do sound system: selectors tocam roots, dub e reggae brasileiro no vinil, num encontro que abre o microfone para a mensagem, recebe pocket shows de bandas locais, monta feira de discos e artesanato e realiza roda de conversa sobre a história e a espiritualidade do reggae. Um painel de graffiti pintado ao vivo registra o dia, e uma participação de hip-hop honra a raiz dupla do coletivo.</p>
+    <p>O Sesc Itaquera já fez do reggae uma tradição de domingo. A Toca chega como parceira dessa tradição: um coletivo do bairro vizinho, com quase uma década de estrada em reggae e sound system na Zona Leste, pronto para dar continuidade e regularidade a essa cultura dentro da unidade.</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><span class="sec-n">02</span><h2>O proponente: Toca do Reparo Cultural</h2></div>
+    <p>A Toca do Reparo Cultural é um coletivo cultural cujo objetivo central é reparar, promover e disseminar as culturas urbanas e suas vertentes, para todas as idades. O Reggae e a cultura do sound system estão na raiz do coletivo desde o primeiro dia, ao lado do Hip-Hop e do Graffiti. O trabalho acontece por meio de apresentações musicais, sound system, oficinas, feiras, exposições e intervenções culturais públicas.</p>
+    <p>O coletivo tem base na Zona Leste de São Paulo, em Arthur Alvim, e tem como referência a Praça Dilva Gomes Martins, conhecida pelos locais como Praça do Morcegão. A origem remonta a 2015 e 2016.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="num">2015</div><div class="cap">Primeiras intervenções de reggae no Morcegão</div></div>
+      <div class="stat"><div class="num">2018</div><div class="cap">Parceria selada com a cultura sound system</div></div>
+      <div class="stat"><div class="num">3</div><div class="cap">Comunidades da Zona Leste alcançadas</div></div>
+      <div class="stat"><div class="num">100%</div><div class="cap">Programação gratuita</div></div>
+    </div>
+
+    <h3>Trajetória em números</h3>
+    <ul>
+      <li>Origem em 2015 com intervenções de Reggae e Rap na Praça do Morcegão, feitas com vitrola e vinil, de graça, para jovens e adultos do bairro, com cerca de três horas de duração.</li>
+      <li>Parceria selada em 2018 entre o Hip-Hop, a cultura Reggae e os sistemas de som, com foco em levar os eventos aos lugares de maior impacto social no entorno.</li>
+      <li>Eventos de reggae e sound system nas comunidades da Barroca, Eliane e Nhocuné, na região próxima ao coletivo.</li>
+      <li>Parcerias com artistas de reggae de Itaquera, como Fya Sound e Caiuby.</li>
+      <li>Ações de graffiti em parceria com a Prefeitura de São Paulo e revitalização de espaços na região.</li>
+      <li>Base em Arthur Alvim, a poucos minutos do Sesc Itaquera.</li>
+    </ul>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Nome</th><th>Função</th></tr></thead>
+        <tbody>
+          <tr><td>João Gustavo</td><td>Coordenador geral</td></tr>
+          <tr><td>Andrei Oliveira</td><td>Consultor e produtor executivo</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>A Toca chega ao Sesc Itaquera com repertório, público e método de sound system já testados na Zona Leste.</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><span class="sec-n">03</span><h2>Justificativa</h2></div>
+    <h3>Por que Reggae, por que agora</h3>
+    <p>O Reggae nasceu na Jamaica no fim dos anos 1960, herdeiro do ska e do rocksteady, ligado à espiritualidade rastafári e a uma mensagem de paz, resistência e dignidade. Junto dele cresceu a cultura do sound system: grandes caixas de som na rua, o selector que escolhe os discos e o mestre no microfone, transformando a praça em ponto de encontro da comunidade. No Brasil, o reggae criou raízes profundas, de São Luís do Maranhão, chamada de Jamaica brasileira, às periferias de São Paulo, sempre como música de mensagem e de comunhão.</p>
+    <p>Hoje, a popularização de novas vertentes e a crescente virtualização das relações afastam parte do público dessa tradição viva. A Toca existe para reparar essa distância. A proposta é reaproximar a comunidade da cultura do sound system e do reggae de raiz, com sua mensagem de paz, amor, unidade e consciência, dentro de um equipamento cultural de referência para toda a Zona Leste.</p>
+    <h3>Por que o Sesc Itaquera</h3>
+    <p>O Sesc é uma entidade privada de finalidade pública, com missão educativa no centro da sua ação e compromisso com a educação não formal, a convivência e a valorização da cultura popular. O Sesc Itaquera já transformou o reggae em tradição de domingo e reconhece a cultura negra e o vínculo com o território como valores da sua programação.</p>
+    <p>Essa proposta se encaixa nesse projeto por três motivos:</p>
+    <ol>
+      <li><strong>Continuidade.</strong> A tradição de reggae de domingo do Sesc ganha regularidade e curadoria de um coletivo que vive essa cultura o ano inteiro.</li>
+      <li><strong>Território.</strong> Arthur Alvim faz fronteira com Itaquera. A Toca traz a cena, os selectors, as bandas e o público que já circulam pela região.</li>
+      <li><strong>Dia inteiro para a família.</strong> Um evento de dia completo, das 10h às 17h, ocupa o domingo do Sesc com cultura gratuita, segura e para todas as idades.</li>
+    </ol>
+    <p>Onde o Sesc já cultiva o reggae, a Toca ajuda a manter o roots tocando o ano todo.</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><span class="sec-n">04</span><h2>Objetivos</h2></div>
+    <h3>Objetivo geral</h3>
+    <p>Ocupar o domingo do Sesc Itaquera com um evento cultural gratuito de dia inteiro, dedicado ao Reggae e à cultura do sound system, que fortaleça a cena da Zona Leste, forme público e dissemine a mensagem de paz, amor, unidade e consciência.</p>
+    <h3>Objetivos específicos e metas</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Objetivo específico</th><th>Meta mensurável no ciclo piloto</th></tr></thead>
+        <tbody>
+          <tr><td>Realizar a programação com regularidade</td><td>6 domingos de dia inteiro ao longo de um semestre, um por mês</td></tr>
+          <tr><td>Colocar o sound system em cena</td><td>1 sessão do Sound System do Morcegão por domingo, com selectors convidados</td></tr>
+          <tr><td>Valorizar o artista e a banda local</td><td>No mínimo 2 pocket shows por edição: reggae em destaque e participação de hip-hop</td></tr>
+          <tr><td>Registrar a arte visual</td><td>1 painel de graffiti pintado ao vivo por edição</td></tr>
+          <tr><td>Formar novo público e novos selectors</td><td>No mínimo 3 oficinas gratuitas por edição: seleção musical, percussão e graffiti</td></tr>
+          <tr><td>Abrir espaço para a mensagem</td><td>1 espaço aberto de microfone e poesia por edição, de 30 a 45 minutos</td></tr>
+          <tr><td>Ocupar o espaço com a feira</td><td>1 feira de discos, sebo e artesanato por edição</td></tr>
+          <tr><td>Alcançar o público do território</td><td>Público estimado a partir de 300 pessoas ao longo do dia, com crescimento no ciclo</td></tr>
+          <tr><td>Transmitir o conhecimento da cultura</td><td>1 roda de conversa sobre história, espiritualidade ou ofícios do reggae por edição</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">As metas são pontos de partida para o ciclo piloto e podem ser calibradas junto à equipe de programação do Sesc.</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><span class="sec-n">05</span><h2>Público-alvo</h2></div>
+    <p>A programação é livre e pensada para todas as idades. O público prioritário são moradores da Zona Leste, com atenção especial ao entorno de Itaquera e Arthur Alvim. O projeto acolhe:</p>
+    <ul>
+      <li>Famílias que passam o domingo no parque do Sesc e encontram cultura gratuita o dia inteiro.</li>
+      <li>Amantes do reggae de raiz de todas as gerações.</li>
+      <li>Jovens em busca de espaços de expressão, formação e pertencimento.</li>
+      <li>Selectors, músicos, grafiteiros e artesãos locais, iniciantes e experientes.</li>
+      <li>Frequentadores do Sesc interessados em cultura popular e música de raiz.</li>
+    </ul>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><span class="sec-n">06</span><h2>Programação do dia</h2></div>
+    <p>O Sesc Itaquera funciona aos domingos das 9h às 17h. Por isso, o evento é pensado como um programa de dia inteiro, das 10h às 17h, e não como um evento noturno. A sessão de sound system acontece como um roots de tarde, respeitando o horário da unidade.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Horário</th><th>Atividade</th></tr></thead>
+        <tbody>
+          <tr><td>10h00</td><td>Abertura. Selectors abrem o dia no vinil, começa o painel de graffiti ao vivo e abre a feira de discos e artesanato</td></tr>
+          <tr><td>10h30</td><td>Oficinas gratuitas: seleção musical e sound system, percussão, graffiti</td></tr>
+          <tr><td>12h00</td><td>Roda de conversa e sarau. História, espiritualidade e mensagem do reggae, com microfone aberto</td></tr>
+          <tr><td>13h00</td><td>Intervalo. Feira, alimentação e som ambiente</td></tr>
+          <tr><td>13h30</td><td>Sound System do Morcegão. Sessão de roots, dub e reggae nacional com selectors convidados</td></tr>
+          <tr><td>15h00</td><td>Pocket show de reggae. Banda ou artista convidado</td></tr>
+          <tr><td>15h45</td><td>Participação de hip-hop. Pocket show de rap sobre bases de dub e reggae, honrando a raiz dupla do coletivo</td></tr>
+          <tr><td>16h15</td><td>Revelação do painel de graffiti e retorno do sound system</td></tr>
+          <tr><td>16h45</td><td>Dedicatórias finais e roda de encerramento</td></tr>
+          <tr><td>17h00</td><td>Encerramento no horário da unidade</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">O painel de graffiti e a feira acontecem de forma contínua ao longo de todo o dia. O formato é flexível: pode ser comprimido para um bloco de tarde, das 13h às 17h, mantendo o sound system e o graffiti, ou ajustado conforme o calendário e os espaços da unidade.</p>
+    <h3>O Sound System do Morcegão, em detalhe</h3>
+    <ol>
+      <li><strong>A montagem do som.</strong> As caixas se empilham e formam o coração do encontro. O sound system é o instrumento coletivo do dia.</li>
+      <li><strong>A seleção roots.</strong> Os selectors alternam roots, dub e reggae brasileiro no vinil, conduzindo o público pela história do gênero.</li>
+      <li><strong>As dedicatórias.</strong> Recados e dedicatórias no microfone transformam a sessão numa conversa entre o som e a comunidade.</li>
+      <li><strong>O espaço da mensagem.</strong> O microfone se abre para a palavra consciente, a poesia e o recado, no espírito da cultura.</li>
+      <li><strong>A comunhão.</strong> Não há disputa. O domingo é encontro, dança e família, no compasso do One Love.</li>
+    </ol>
+    <p>As seleções e as bases vêm, sempre que possível, de selectors e acervos da própria região, o que soma ao impacto social do evento.</p>
+    <h3>Edições especiais</h3>
+    <ul>
+      <li>Tributos a mestres do reggae, do roots jamaicano ao reggae brasileiro.</li>
+      <li>Especial de novembro, no mês da Consciência Negra.</li>
+      <li>Encontros de sound system em diálogo com o Hip-Hop, unindo as duas raízes do coletivo.</li>
+      <li>Edições de férias e datas do calendário do reggae.</li>
+      <li>Ações solidárias, como a temporada de coleta de agasalhos.</li>
+    </ul>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><span class="sec-n">07</span><h2>Metodologia</h2></div>
+    <p>O projeto se organiza sobre os elementos da cultura reggae e do sound system, cada um com uma função clara dentro do domingo:</p>
+    <ul>
+      <li><strong>Sound system.</strong> As caixas, o selector e a operação do som são o coração do encontro.</li>
+      <li><strong>Seleção e vinil.</strong> Roots, dub e reggae nacional conduzem a viagem musical do dia.</li>
+      <li><strong>Microfone e mensagem.</strong> A palavra consciente, a dedicatória e a poesia dão voz à cultura.</li>
+      <li><strong>Graffiti e registro.</strong> O painel pintado ao vivo transforma cada edição num registro visual coletivo.</li>
+      <li><strong>Roda e comunhão.</strong> A dança, a família e o espírito coletivo definem o clima do domingo.</li>
+      <li><strong>Conhecimento.</strong> A história, a espiritualidade e os ofícios do reggae circulam nas oficinas e nas rodas de conversa.</li>
+    </ul>
+    <p>Cada domingo é conduzido pela equipe da Toca em diálogo com a equipe do Sesc Itaquera. A produção segue o método já consolidado na rua, com o salto de qualidade que o equipamento do Sesc oferece em estrutura, segurança e acessibilidade.</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><span class="sec-n">08</span><h2>Cronograma</h2></div>
+    <p>Proposta de ciclo piloto de um semestre, com seis edições mensais aos domingos. As datas exatas se ajustam ao calendário de programação do Sesc Itaquera.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Fase</th><th>Período</th><th>Ações</th></tr></thead>
+        <tbody>
+          <tr><td>Pré-produção</td><td>Mês anterior à estreia</td><td>Alinhamento com o Sesc, definição de datas, curadoria de selectors, bandas e grafiteiros, divulgação</td></tr>
+          <tr><td>Edição 1</td><td>Mês 1</td><td>Estreia com dia completo: sound system, pocket shows e painel de graffiti</td></tr>
+          <tr><td>Edição 2</td><td>Mês 2</td><td>Programação completa, oficina de seleção musical</td></tr>
+          <tr><td>Edição 3</td><td>Mês 3</td><td>Edição temática, tributo a um mestre do reggae</td></tr>
+          <tr><td>Edição 4</td><td>Mês 4</td><td>Programação completa, encontro de sound systems</td></tr>
+          <tr><td>Edição 5</td><td>Mês 5</td><td>Programação completa, oficina de percussão e graffiti</td></tr>
+          <tr><td>Edição 6</td><td>Mês 6</td><td>Edição de encerramento do ciclo e avaliação com o público</td></tr>
+          <tr><td>Avaliação</td><td>Após a Edição 6</td><td>Relatório de indicadores, escuta da comunidade e desenho do próximo ciclo</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Com resultado positivo, o ciclo pode migrar para periodicidade quinzenal a partir do semestre seguinte.</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><span class="sec-n">09</span><h2>Contrapartidas e impacto social</h2></div>
+    <ul>
+      <li><strong>Gratuidade total.</strong> Toda a programação é aberta e gratuita, fiel à origem 100% voluntária do coletivo.</li>
+      <li><strong>Formação de público e de novos selectors.</strong> Oficinas gratuitas abrem porta de entrada para novos participantes da cultura.</li>
+      <li><strong>Economia da cena local.</strong> Selectors, bandas, DJs, grafiteiros, artesãos e sebos de disco recebem espaço, palco e valorização.</li>
+      <li><strong>Ocupação qualificada do domingo.</strong> Um dia inteiro de lazer e cultura seguro, familiar e enraizado no bairro.</li>
+      <li><strong>Memória e conhecimento.</strong> As rodas de conversa e os painéis de graffiti preservam e transmitem a história do reggae e do sound system.</li>
+      <li><strong>Protagonismo do território.</strong> A programação afirma a cultura negra e de raiz como patrimônio, no mesmo espírito que o Sesc Itaquera já reconhece na sua ação.</li>
+    </ul>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><span class="sec-n">10</span><h2>Acessibilidade e diversidade</h2></div>
+    <p>O projeto acompanha o compromisso do Sesc com a ação educativa e anticapacitista:</p>
+    <ul>
+      <li>Uso dos recursos de acessibilidade da unidade, com previsão de interpretação em Libras nos momentos de fala e apresentação, conforme disponibilidade.</li>
+      <li>Espaço acessível para circulação de pessoas com deficiência e mobilidade reduzida.</li>
+      <li>Programação livre para todas as idades, com atividades que acolhem crianças, jovens, adultos e idosos.</li>
+      <li>Atenção à representatividade entre convidados, selectors, grafiteiros e oficineiros.</li>
+    </ul>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><span class="sec-n">11</span><h2>Ficha técnica</h2></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Função</th><th>Responsável</th></tr></thead>
+        <tbody>
+          <tr><td>Coordenação geral</td><td>João Gustavo</td></tr>
+          <tr><td>Consultoria e produção executiva</td><td>Andrei Oliveira</td></tr>
+          <tr><td>Seleção musical e operação de som</td><td>Rede de selectors e sound systems da Zona Leste</td></tr>
+          <tr><td>Bandas e artistas convidados</td><td>Cena reggae e hip-hop local</td></tr>
+          <tr><td>Graffiti e artes visuais</td><td>Grafiteiros convidados da cena local</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>A equipe da Toca conduz curadoria, produção e execução, em parceria com a equipe de programação e a estrutura técnica do Sesc Itaquera.</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><span class="sec-n">12</span><h2>Recursos e parceria</h2></div>
+    <p>A proposta é uma parceria de execução. A divisão sugerida é esta:</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Fornecido pela Toca do Reparo Cultural</th><th>Fornecido pelo Sesc Itaquera</th></tr></thead>
+        <tbody>
+          <tr><td>Curadoria e produção artística</td><td>Espaço físico, áreas abertas e cobertas</td></tr>
+          <tr><td>Rede de selectors, bandas, grafiteiros e oficineiros</td><td>Estrutura de som, palco e iluminação</td></tr>
+          <tr><td>Identidade do Sound System do Morcegão</td><td>Apoio de comunicação e divulgação institucional</td></tr>
+          <tr><td>Mobilização do público do território</td><td>Recursos de acessibilidade da unidade</td></tr>
+          <tr><td>Registro e memória das edições</td><td>Apoio de logística e equipe de apoio</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Cachês, premiação e custeio de oficinas são definidos em conjunto, conforme o modelo de programação e os recursos disponíveis na unidade.</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><span class="sec-n">13</span><h2>Indicadores de avaliação</h2></div>
+    <p>Ao final do ciclo, o projeto apresenta relatório com:</p>
+    <ul>
+      <li>Número de edições realizadas e de público ao longo do dia.</li>
+      <li>Número de selectors, bandas, artistas e grafiteiros convidados.</li>
+      <li>Número de oficinas e de participantes formados.</li>
+      <li>Número de painéis de graffiti produzidos.</li>
+      <li>Registro fotográfico e audiovisual de cada domingo.</li>
+      <li>Escuta qualitativa do público e da comunidade sobre a experiência.</li>
+      <li>Recomendações para o ciclo seguinte, incluindo a decisão sobre migrar para periodicidade quinzenal.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="sec-h" style="margin-bottom:20px"><span class="sec-n" style="color:var(--gold)">14</span><h2>Contato</h2></div>
+    <p style="color:#d3caae;font-family:var(--font-b);margin:0 0 6px">Toca do Reparo Cultural</p>
+    <div class="contact-grid">
+      <div><div class="k">Coordenação geral</div><div class="v">João Gustavo</div></div>
+      <div><div class="k">Produção executiva</div><div class="v">Andrei Oliveira</div></div>
+      <div><div class="k">E-mail</div><div class="v">tocadoreparocultural@gmail.com</div></div>
+      <div><div class="k">Telefone e WhatsApp</div><div class="v">+55 11 97800-9337</div></div>
+      <div><div class="k">Redes sociais</div><div class="v">@tocadoreparocultural</div></div>
+    </div>
+    <p class="tagline">Do Morcegão para o <span class="hl">Sesc</span>,<br>no compasso do roots.</p>
+    <p class="tag-sub">Paz · Amor · Unidade · Consciência</p>
+  </div>
+</footer>
+</body>
+</html>
